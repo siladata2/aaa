@@ -13,7 +13,7 @@ require('events').EventEmitter.defaultMaxListeners = 500;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
-    secret: 'dew-md-secret',
+    secret: 'sila',
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false } // set to true if using HTTPS
@@ -30,7 +30,7 @@ app.get('/login', (req, res) => {
 
 // Multiple users
 const ADMINS = [
-  { username: 'silatech', password: '22' },
+  { username: 'sila', password: '22' },
 ];
 
 app.post('/api/login', (req, res) => {
