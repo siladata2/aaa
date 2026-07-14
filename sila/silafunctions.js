@@ -9,11 +9,11 @@ const { jidNormalizedUser, proto, prepareWAMessageMedia, downloadContentFromMess
 
 // ===== GLOBAL CONFIG =====
 const footer = `> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝐒𝐢𝐥𝐚 𝐓𝐞𝐜𝐡`;
-const logo = `https://i.ibb.co/YBNqypVR/IMG-20260430-WA0068.jpg`;
-const caption = `𝚂𝙸𝙻𝙰 𝙼𝙸𝙽𝙸`; 
-const botName = '𝚂𝙸𝙻𝙰 𝙼𝙸𝙽𝙸';
-const mainSite = 'https://aaa-6f4l.onrender.com/';
-const apibase = 'https://dew-api.vercel.app';
+const logo = `https://files.catbox.moe/hjcma0.jpeg`;
+const caption = `𝚂𝙸𝙻𝙰 𝙰𝙸`;
+const botName = '𝚂𝙸𝙻𝙰 𝙰𝙸';
+const mainSite = 'https://ai.silatech.site'; // ✅ IMEBADILISHWA
+const apibase = 'https://api.silatech.site'; // ✅ IMEBADILISHWA
 const apikey = `free`;
 
 const config = {
@@ -112,27 +112,17 @@ function capital(string) {
 
 const createSerial = (size) => crypto.randomBytes(size).toString('hex').slice(0, size);
 
+// ===== MYQUOTED =====
 const myquoted = {
-    key: {
-        remoteJid: 'status@broadcast',
-        participant: '0@s.whatsapp.net',
-        fromMe: false,
-        id: createSerial(16).toUpperCase()
+    "key": {
+        "participant": '0@s.whatsapp.net',
+        "remoteJid": '0@s.whatsapp.net',
+        "fromMe": false,
+        "id": "Halo"
     },
-    message: {
-        contactMessage: {
-            displayName: botName,
-            vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:${botName}\nORG:𝚂𝙸𝙻𝙰 Coders;\nTEL;type=CELL;type=VOICE;waid=255789661031:255789661031\nEND:VCARD`,
-            contextInfo: {
-                stanzaId: createSerial(16).toUpperCase(),
-                participant: "0@s.whatsapp.net",
-                quotedMessage: { conversation: "𝚂𝙸𝙻𝙰 𝙰𝙸" }
-            }
-        }
-    },
-    messageTimestamp: Math.floor(Date.now() / 1000),
-    status: 1,
-    verifiedBizName: "Meta"
+    "message": {
+        "conversation": "𝚂𝙸𝙻𝙰 𝙰𝙸"
+    }
 };
 
 async function SendSlide(socket, jid, newsItems) {
@@ -180,7 +170,7 @@ function getContextInfo(sender) {
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
             newsletterJid: '120363402325089913@newsletter',
-            newsletterName: '𝚂𝙸𝙻𝙰 𝚃𝙴𝙲𝙷',
+            newsletterName: '𝚂𝙸𝙻𝙰 𝙰𝙸',
             serverMessageId: 143
         }
     };
